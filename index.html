@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Sam Olofsgård WIN21, Webbutvecklare .Net, EC-utbildning">
+    <title>Formulär med validering</title>
+    <script src="https://kit.fontawesome.com/124ac6c2b5.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="col-md-6">
+            
+            <form id="contactForm" onsubmit="onSubmit(event)" novalidate>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control needs-validation" id="contact-firstname" placeholder="Förnamn">
+                    <label for="contact-firstname">Förnamn</label>
+                    <div id="contact-firstname-error" class="invalid-feedback">Du måste ange ett Förnamn</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control needs-validation" id="contact-lastname" placeholder="Efternamn">
+                    <label for="contact-lastname">Efternamn</label>
+                    <div id="contact-lastname-error" class="invalid-feedback">Du måste ange ett Efternamn</div>
+                </div>
+
+    
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control needs-validation" id="email" placeholder="name@example.com">
+                    <label for="floatingInput">E-postadress</label>
+                    <div id="email-error" class="invalid-feedback">Du måste ange en giltig email</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control needs-validation" id="password" placeholder="Lösenord med A-Z stora och små bokstäver och några tecken">
+                    <label for="password">Lösenord</label>
+                    <div id="password-error" class="invalid-feedback">Du måste ange ett giltigt lössenord</div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control needs-validation" id="confirm-password" placeholder="Bekräfta lösenordet">
+                    <label for="confirm-password" >Bekräfta Lösenord</label>
+                    <div id="password-error" class="invalid-feedback">Du måste ange samma lösenord</div>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control needs-validation" id="DateOfBirth" placeholder="Födelsedatum">
+                    <label for="DateOfBirth">Födelsedata: exempel - 19820729</label>
+                    <div id="DateOfBirth-error" class="invalid-feedback">Du måste vara 18 år eller äldre</div>
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="adress form-control mb-3 needs-validation" id="adress" placeholder="skriv din adress här"></input>
+                    <label for="message">Adress: Exempel - Storgatan 32b 571 92 Nässjö</label>
+                    <div id="adress-error" class="invalid-feedback">Du måste ange en giltig adress</div>
+                </div>
+
+                
+                
+                <div class="d-grid">
+                    <button id="contactForm-submit" class="submit mt-4 btn btn-secondary">Skicka</button>
+                </div>
+            </form>
+            
+            
+         </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
