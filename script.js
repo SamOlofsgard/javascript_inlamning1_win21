@@ -1,10 +1,3 @@
-/* function validMinValue(value, minValue=2){
-    if(value.length < minValue)
-        return false
-    
-    return true
-} */
-
 function validMinValueTwo(value,){
     const regEx = /[0-9a-zA-Z]{2,}/
     if(!regEx.test(value))
@@ -105,7 +98,8 @@ function checkValidForm(elements){
 
 var forms = document.querySelectorAll('.needs-validation')
 
-forms.forEach(element =>{
+function setEventListeners(){
+    forms.forEach(element =>{
 
    switch(element.type){
         case "text":
@@ -198,4 +192,7 @@ forms.forEach(element =>{
     }
 
 })
+}
+
+setEventListeners()
 checkValidForm(forms)
