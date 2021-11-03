@@ -108,11 +108,13 @@ function setEventListeners(){
                     element.addEventListener("keyup", function(e){
                         if(!validAdress(e.target.value)){
                             e.target.classList.add("is-invalid");
+                            document.getElementById(`${e.target.id}-error`).style.display ="block";
                             checkValidForm(forms)
                         }
                         else{
                             e.target.classList.remove("is-invalid");
-                        checkValidForm(forms)
+                            document.getElementById(`${e.target.id}-error`).style.display ="none";
+                            checkValidForm(forms)
                         }
                     })
                 }
@@ -121,19 +123,21 @@ function setEventListeners(){
                     element.addEventListener("keyup", function(e){
                         if(DateOfBirthValidate(e.target.value)){
                             e.target.classList.add("is-invalid");
+                            document.getElementById(`${e.target.id}-error`).style.display ="block";
                             checkValidForm(forms)
                         }
                         else{
                             e.target.classList.remove("is-invalid");
+                            document.getElementById(`${e.target.id}-error`).style.display ="none";
                             checkValidForm(forms)
                         }
                      })
                 }
                 else{
                     if(!validMinValueTwo(e.target.value)){
-                    e.target.classList.add("is-invalid");
-                    document.getElementById(`${e.target.id}-error`).style.display ="block";
-                    checkValidForm(forms)
+                        e.target.classList.add("is-invalid");
+                        document.getElementById(`${e.target.id}-error`).style.display ="block";
+                        checkValidForm(forms)
                     }
                     else{
                         e.target.classList.remove("is-invalid");
